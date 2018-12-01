@@ -66,7 +66,7 @@ async function release () {
 
     async function getTagsRaw() {
         return new Bluebird(function (resolve) {
-            CP.execAsync('git show-ref --tags').then((gitTags) => {
+            CP.execAsync('git show-ref --tags | grep -v develop').then((gitTags) => {
                 resolve(gitTags);
             }).catch((e) => {
                 console.log('No tags could be found, using regular commits');

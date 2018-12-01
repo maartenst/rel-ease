@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 const Changelog = require('generate-changelog');
 const Fs = require('fs');
 const pkg = require('package-json-utils');
@@ -102,7 +103,7 @@ async function createchangelog () {
 
     async function getTagsRaw() {
         return new Bluebird(function (resolve) {
-            return resolve(CP.execAsync('git show-ref --tags'));
+            return resolve(CP.execAsync('git show-ref --tags | grep -v develop'));
         })
     }
 
