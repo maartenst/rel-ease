@@ -1,0 +1,29 @@
+{
+  "name": "rel-ease",
+  "version": "1.0.0",
+  "description": "Release management made relatively easy",
+  "bin": {
+    "create-changelog": "bin/createchangelog.js",
+    "create-release": "bin/release.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maartenst/rel-ease"
+  },
+  "author": "Maarten Stolte",
+  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "@semantic-release/commit-analyzer": "^6.1.0",
+    "bluebird": "^3.5.3",
+    "cz-conventional-changelog": "^2.1.0",
+    "generate-changelog": "https://github.com/maartenst/generate-changelog#master",
+    "get-stream": "^4.1.0",
+    "git-log-parser": "^1.2.0",
+    "package-json-utils": "^1.1.1"
+  }
+}
