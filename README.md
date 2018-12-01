@@ -1,13 +1,13 @@
-#Rel-ease 
+# Rel-ease 
 Release management made relatively easy.
 
-##Useage
+## Useage
 Install and run `npx create-changelog` to create the initial changelog. 
 
 Run `npx create-release` to create a release
 
-##License
+## License
 MIT
 
-##Author
+## Author
 Maarten Stolte
