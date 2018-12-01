@@ -1,3 +1,13 @@
+### 1.1.0 (2018-12-01)
+
+##### Chores
+
+* **CHANGELOG.md:**  Created changelog ([a8f298fa](https://github.com/maartenst/rel-ease/commit/a8f298fa819b2cef13252e1b56111f53401a2c2c))
+
+##### Bug Fixes
+
+*  Filter out tags containing develop. This should become an option to filter on any word later on ([1c9ca9ef](https://github.com/maartenst/rel-ease/commit/1c9ca9ef844f1ab434317bbd83ef0d07befb7a2e))
+
 ### 1.0.0 (2018-12-01)
 
 ##### New Features
