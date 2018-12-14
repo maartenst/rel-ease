@@ -62,7 +62,18 @@ async function release () {
         .then(function (changelog) {
             Fs.writeFileSync('./CHANGELOG.md', changelog + previousChangelog);
         });
+    await commitChangedFiles();
     console.log(`Release ${newVersion} has been created ✅`);
+
+    async function commitChangedFiles() {
+        return new Bluebird(function (resolve) {
+            CP.execAsync('git add package.json CHANGELOG.md && git commit -m "Created release ' + newVersion + '"').then(() => {
+                console.log('Committed package.json + CHANGELOG.md')
+            }).catch((e) => {
+                console.log('Something went wrong committing package.json + CHANGELOG.md');
+            });
+        })
+    }
 
     async function getTagsRaw() {
         return new Bluebird(function (resolve) {
