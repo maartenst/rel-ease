@@ -1,3 +1,9 @@
+### 1.3.0 (2018-12-14)
+
+##### New Features
+
+*  Added automatic committing of package.json and CHANGELOG.md ([63c65fb7](https://github.com/maartenst/rel-ease/commit/63c65fb7c07e1d6bfa766d133ba599e60ff0bfaa))
+
 ### 1.1.0 (2018-12-01)
 
 ##### Chores
