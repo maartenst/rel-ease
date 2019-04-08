@@ -1,10 +1,11 @@
 {
-  "name": "rel-ease",
+  "name": "@workingweb/rel-ease",
   "version": "1.2.0",
   "description": "Release management made relatively easy",
   "bin": {
     "create-changelog": "bin/createchangelog.js",
-    "create-release": "bin/release.js"
+    "create-release": "bin/release.js",
+    "tag-release": "bin/tag.js"
   },
   "repository": {
     "type": "git",
