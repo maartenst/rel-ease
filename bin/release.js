@@ -8,7 +8,7 @@ const Bluebird = require('bluebird');
 const CP = Bluebird.promisifyAll(require('child_process'));
 const getReleaseType = require('../lib/releasetype');
 
-/* @TODO check version in package.json with latest tag. If they differ the previous release 
+/* @TODO check version in package.json with latest tag. If they differ the previous release
    was not tagged, and thus we do not want to create new release yet */
 
 async function release () {
@@ -26,6 +26,9 @@ async function release () {
     if (allTags.length > 0) {
         allTags.unshift({hash: `${allTags[0].version}^@`, version: `${allTags[0].version}^@`});
     }
+    allTags.sort(function (a, b) {
+        return semver.gt(a.version, b.version);
+    });
     // create a new release
     // @todo maybe compare latest tag from log and version in package.json to make sure we don't make a bigger mess
     // get latest tag
