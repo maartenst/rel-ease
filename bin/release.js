@@ -7,6 +7,8 @@ const changelogPkg = require('generate-changelog/lib/package');
 const Bluebird = require('bluebird');
 const CP = Bluebird.promisifyAll(require('child_process'));
 const getReleaseType = require('../lib/releasetype');
+const semver = require('semver');
+
 
 /* @TODO check version in package.json with latest tag. If they differ the previous release
    was not tagged, and thus we do not want to create new release yet */

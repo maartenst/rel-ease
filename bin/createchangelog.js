@@ -5,6 +5,7 @@ const Fs = require('fs');
 const pkg = require('package-json-utils');
 const Bluebird = require('bluebird');
 const CP = Bluebird.promisifyAll(require('child_process'));
+const semver = require('semver');
 
 async function createchangelog () {
     console.log('🦁 release all the things, a 🍝 solution to the manual release work');
