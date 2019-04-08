@@ -24,13 +24,13 @@ async function release () {
             return {hash: tagArray[0], version: tagArray[1]};
         });
     }
+    allTags.sort(function (a, b) {
+        return semver.gt(a.version, b.version);
+    });
     // make sure to start from the start by adding the start of the commit log
     if (allTags.length > 0) {
         allTags.unshift({hash: `${allTags[0].version}^@`, version: `${allTags[0].version}^@`});
     }
-    allTags.sort(function (a, b) {
-        return semver.gt(a.version, b.version);
-    });
     // create a new release
     // @todo maybe compare latest tag from log and version in package.json to make sure we don't make a bigger mess
     // get latest tag
