@@ -1,3 +1,9 @@
+### 1.3.0 (2019-04-08)
+
+##### New Features
+
+*  Added the posibility to tag based on the released version and renamed the package ([12d1c6e5](https://github.com/maartenst/rel-ease/commit/12d1c6e5aaeabc07779696495bd2246e0188855a))
+
 ### 1.2.0 (2018-12-14)
 
 ##### New Features
