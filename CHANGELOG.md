@@ -1,3 +1,11 @@
+#### 1.3.1 (2019-04-08)
+
+##### Bug Fixes
+
+*  Sort earlier on in the process ([2698f931](https://github.com/maartenst/rel-ease/commit/2698f931a7756b64a064fced222bd0f71e912181))
+*  Added missing requires ([6b7af836](https://github.com/maartenst/rel-ease/commit/6b7af83668fff3135c206ad6d9a6567c4afb3c1a))
+*  Fixed a bug where the wrong tag would be thought of as the latest one ([46b09dbc](https://github.com/maartenst/rel-ease/commit/46b09dbccda92fcc9b2a1a5fc3def16b14e8dd5b))
+
 ### 1.3.0 (2019-04-08)
 
 ##### New Features

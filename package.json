@@ -1,6 +1,6 @@
 {
   "name": "@workingweb/rel-ease",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Release management made relatively easy",
   "bin": {
     "create-changelog": "bin/createchangelog.js",
