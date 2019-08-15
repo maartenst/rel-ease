@@ -1,3 +1,9 @@
+#### 1.3.2 (2019-08-15)
+
+##### Bug Fixes
+
+*  semver.gt returns a boolean where sort expects different returns, so added conversion to 1 and ([11815041](https://github.com/maartenst/rel-ease/commit/1181504150167ed5486d7507494bfb5809e02783))
+
 #### 1.3.1 (2019-04-08)
 
 ##### Bug Fixes
