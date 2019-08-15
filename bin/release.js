@@ -25,7 +25,7 @@ async function release () {
         });
     }
     allTags.sort(function (a, b) {
-        return semver.gt(a.version, b.version);
+        return semver.gt(a.version, b.version) ? 1 : -1;
     });
     // make sure to start from the start by adding the start of the commit log
     if (allTags.length > 0) {

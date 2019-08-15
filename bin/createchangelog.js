@@ -18,7 +18,7 @@ async function createchangelog () {
         return { hash: tagArray[0], version: tagArray[1]};
     });
     allTags.sort(function (a, b) {
-        return semver.gt(a.version, b.version);
+        return semver.gt(a.version, b.version) ? 1 : -1;
     });
     let giturl = packageJson.repository.url.match(/^.*(http.*?)(?:\.git)?$/);
     let options = {repoUrl: giturl[1]};
