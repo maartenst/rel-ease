@@ -19,11 +19,13 @@ async function release () {
     let tagsRaw = await getTagsRaw();
     let allTags = [];
     if (tagsRaw) {
-        allTags = tagsRaw.split('\n').filter((tag) => tag.trim() !== '').map((tag) => {
+        allTags = tagsRaw.split('\n').filter((tag) => tag.trim() !== '').filter((tag) => !tag.includes('-')).map((tag) => {
             const tagArray = tag.split(/\s+refs\/tags\//);
             return {hash: tagArray[0], version: tagArray[1]};
         });
     }
+    console.log(allTags);
+    exit;
     allTags.sort(function (a, b) {
         return semver.gt(a.version, b.version) ? 1 : -1;
     });
