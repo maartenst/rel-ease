@@ -1,3 +1,10 @@
+#### 1.3.3 (2019-12-18)
+
+##### Bug Fixes
+
+*  filter out the non release tags (assuming they have a dash in them) ([6209a055](https://github.com/maartenst/rel-ease/commit/6209a055f78c3be57848950a282ffab3f8030513))
+*  semver.gt returns a boolean where sort expects different returns, so added conversion to 1 and ([11815041](https://github.com/maartenst/rel-ease/commit/1181504150167ed5486d7507494bfb5809e02783))
+
 #### 1.3.2 (2019-08-15)
 
 ##### Bug Fixes
